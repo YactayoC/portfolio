@@ -1,4 +1,4 @@
-.my__projects {
+.projectsSalient {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -7,13 +7,19 @@
   margin-top: 4rem;
 }
 
-.my__projects h2 {
+@media (min-width: 768px) {
+  .projectsSalient {
+    margin-top: 8rem;
+  }
+}
+
+.projectsSalient-title {
   color: var(--color-secondary-text);
   font-size: 2rem;
   padding-bottom: 2rem;
 }
 
-.my__projects h2::after {
+.projectsSalient-title::after {
   background-color: var(--color-text-underlined);
   content: '';
   display: block;
@@ -49,13 +55,13 @@
   }
 }
 
-.projects__seeMore {
+.projectsSalient-seeMore {
   display: flex;
   justify-content: center;
   margin-top: 4rem;
 }
 
-.projects__seeMore button {
+.projectsSalient-seeMore button {
   align-items: center;
   background-color: transparent;
   border: 2px solid var(--color-secondary-text);
@@ -69,7 +75,7 @@
   transition: background-color 0.3s ease-in-out;
 }
 
-.projects__seeMore button:hover {
+.projectsSalient-seeMore button:hover {
   background-color: var(--color-secondary-text);
 }
 

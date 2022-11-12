@@ -1,7 +1,17 @@
-/* eslint-disable @next/next/no-img-element */
-import { About, AllSkills, Contact, Hero, Navbar, PortfolioLayout, Projects } from 'components';
+import { GetStaticProps } from 'next';
+import { FC } from 'react';
 
-export default function Home({technologies}: any) {
+import { getAllTechnologies } from 'database/dbTechonologies';
+import { getSalientProjects } from 'database/dbProjects';
+import { About, AllSkills, Contact, Hero, Navbar, PortfolioLayout, Projects } from 'components';
+import { IProject, ITechnology } from 'interfaces';
+
+interface Props {
+  technologies: ITechnology[];
+  projects: IProject[];
+}
+
+const Home: FC<Props> = ({ technologies, projects }) => {
   return (
     <PortfolioLayout title="Sebastian Yactayo">
       <header>
@@ -9,26 +19,27 @@ export default function Home({technologies}: any) {
         <Hero />
       </header>
       <main className="container">
-        <div>
+        <div className='two-content'>
           <About />
           <AllSkills technologies={technologies} />
         </div>
-        <Projects projects={[]}/>
+        <Projects projects={projects} />
         <Contact />
       </main>
     </PortfolioLayout>
   );
-}
+};
 
-import { GetStaticProps } from 'next'
-import { getAllTechnologies } from 'database/dbTechonologies';
-
-export const getStaticProps: GetStaticProps = async (ctx) => {
-  const technologies = await  getAllTechnologies();
+export const getStaticProps: GetStaticProps = async ctx => {
+  const technologies = await getAllTechnologies();
+  const projects = await getSalientProjects();
 
   return {
     props: {
-      technologies
-    }
-  }
-}
+      technologies,
+      projects,
+    },
+  };
+};
+
+export default Home;

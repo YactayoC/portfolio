@@ -17,6 +17,7 @@
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+  scroll-margin-top: 5rem;
 }
 
 html,
@@ -61,4 +62,17 @@ body::-webkit-scrollbar-track:active {
 .container {
   width: 90%;
   margin: 0 auto;
+}
+
+.two-content {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .two-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+  }
 }

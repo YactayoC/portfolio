@@ -6,6 +6,12 @@
   margin-block: 4rem;
 }
 
+@media (min-width: 768px) {
+  .contact {
+    margin-top: 8rem;
+  }
+}
+
 .contact h2 {
   font-size: 2rem;
   color: var(--color-secondary-text);
@@ -38,7 +44,7 @@
 
 @media (min-width: 768px) {
   .form {
-    width: 40%;
+    width: 50%;
   }
 }
 

@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form';
 import { ToastContainer, toast } from 'react-toastify';
 
-import { isEmail, isFullname, sendEmail } from 'utils';
+import { isEmail, isName, sendEmail } from 'utils';
 import styles from 'styles/Contact.module.css';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -12,12 +12,7 @@ interface DataContact {
 }
 
 const Contact = () => {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm<DataContact>();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm<DataContact>();
 
   const onSendEmail = async ({ email, name, message }: DataContact) => {
     await sendEmail({ email, name, message })
@@ -67,7 +62,7 @@ const Contact = () => {
               {...register('name', {
                 required: 'Your name is required',
                 minLength: { value: 6, message: 'Minimum 6 characters' },
-                validate: isFullname,
+                validate: isName,
               })}
             />
             {errors.name && <p className={styles.form__error}>{errors.name.message}</p>}

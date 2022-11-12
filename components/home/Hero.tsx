@@ -6,7 +6,9 @@ import styles from 'styles/Hero.module.css';
 
 const Hero = () => {
   useEffect(() => {
-    changeText();
+    const interval = changeText();
+
+    return () => clearInterval(interval);
   }, []);
 
   return (

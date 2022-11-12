@@ -4,7 +4,17 @@ import styles from 'styles/ui/Navbar.module.css';
 const Navbar = () => {
   return (
     <nav className={styles.nav}>
-      <div className={styles['navbar-desktop']}></div>
+      <div className={styles['navbar-desktop']}>
+        <div className={styles['navbar-desktop-logo']}>
+          <a href="#present">{'<YactayoC/>'}</a>
+        </div>
+        <div className={styles['navbar-desktop-links']}>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
 
       <div className={styles['navbar-mobile']}>
         <a href="#about">

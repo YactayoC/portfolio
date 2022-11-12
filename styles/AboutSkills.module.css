@@ -37,6 +37,12 @@
   margin-top: 4rem;
 }
 
+@media (min-width: 768px) {
+  .allSkills {
+    margin-top: 0;
+  }
+}
+
 .allSkills-title {
   font-size: 2rem;
   color: var(--color-secondary-text);
