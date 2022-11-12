@@ -1,24 +1,14 @@
-import { IProject } from 'interfaces';
-import { Project } from 'models';
+import { ITechnology } from 'interfaces';
+import { Technology } from 'models';
 import dbConnect from './connection';
 
-export const getProjectByTitle = async (title: string): Promise<IProject | null> => {
+export const getAllTechnologies = async (): Promise<ITechnology[] | null> => {
   await dbConnect();
-  const project = await Project.findOne({ title }).lean();
+  const technologies = await Technology.find();
 
-  if (!project) {
+  if (!technologies) {
     return null;
   }
 
-  return JSON.parse(JSON.stringify(project));
-};
-
-interface ProjectTitle {
-  title: string;
-}
-
-export const getAllProjectsTitles = async (): Promise<ProjectTitle[]> => {
-  await dbConnect();
-  const projects = await Project.find().select('title -_id').lean();
-  return projects;
+  return JSON.parse(JSON.stringify(technologies));
 };

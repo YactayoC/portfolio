@@ -1,9 +1,34 @@
-import styles from 'styles/Home.module.css'
+/* eslint-disable @next/next/no-img-element */
+import { About, AllSkills, Contact, Hero, Navbar, PortfolioLayout, Projects } from 'components';
 
-export default function Home() {
+export default function Home({technologies}: any) {
   return (
-    <div className={styles.container}>
-     
-    </div>
-  )
+    <PortfolioLayout title="Sebastian Yactayo">
+      <header>
+        <Navbar />
+        <Hero />
+      </header>
+      <main className="container">
+        <div>
+          <About />
+          <AllSkills technologies={technologies} />
+        </div>
+        <Projects projects={[]}/>
+        <Contact />
+      </main>
+    </PortfolioLayout>
+  );
+}
+
+import { GetStaticProps } from 'next'
+import { getAllTechnologies } from 'database/dbTechonologies';
+
+export const getStaticProps: GetStaticProps = async (ctx) => {
+  const technologies = await  getAllTechnologies();
+
+  return {
+    props: {
+      technologies
+    }
+  }
 }
