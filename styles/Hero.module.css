@@ -1,0 +1,87 @@
+.hero {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  padding-block: 6rem;
+  text-align: center;
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 3rem;
+  padding-inline: 1rem;
+  color: #fff;
+}
+
+.hero-title span {
+  position: relative;
+}
+
+.hero-title .first__text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-background);
+  border-left: 2px solid #fff;
+  animation: animate 4s steps(17) infinite;
+}
+
+@keyframes animate {
+  40%,
+  60% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+.hero-cv {
+  background-color: var(--color-secondary-text);
+  color: var(--color-primary-text);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.hero-cv:hover {
+  background-color: var(--color-secondary-text-hover);
+}
+
+.first__text {
+  overflow: hidden;
+  color: var(--color-secondary-text);
+}
+
+.hero-buttons_social {
+  display: flex;
+  gap: 2rem;
+}
+
+.hero-buttons_social img {
+  width: 2.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero-buttons_social img:hover {
+  transform: scale(1.1);
+}
+
+.low img {
+  cursor: pointer;
+  width: 7.5rem;
+}

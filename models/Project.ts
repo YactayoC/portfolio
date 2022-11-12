@@ -1,7 +1,6 @@
 import mongoose, { Schema, model, Model } from 'mongoose';
 
 import { IProject } from 'interfaces';
-import Technology from './Technology';
 
 const ProjectSchema = new Schema({
   title: {
@@ -20,7 +19,8 @@ const ProjectSchema = new Schema({
 
   technologies: [
     {
-      type: Technology,
+      type: mongoose.Types.ObjectId,
+      ref: 'Technology',
     },
   ],
 

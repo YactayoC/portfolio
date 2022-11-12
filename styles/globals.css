@@ -1,12 +1,64 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
-* {
+:root {
+  --color-background: rgb(34, 40, 49);
+  --color-navbar: rgba(139, 145, 153, 0.5);
+  --color-primary-text: rgb(238, 238, 238);
+  --color-primary-text-hover: rgb(155, 155, 155);
+  --color-secondary-text: rgb(0, 173, 181);
+  --color-secondary-text-hover: rgb(2, 136, 143);
+  --color-text-underlined: rgb(0, 111, 116, 0.8);
+}
+
+*,
+*:before,
+*:after {
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  background-color: var(--color-background);
+  font-family: 'Roboto', sans-serif;
 }
 
 a {
   text-decoration: none;
+}
+
+body::-webkit-scrollbar {
+  width: 9px;
+  height: 8px;
+  display: flex;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--color-secondary-text);
+  border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary-text-hover);
+}
+
+body::-webkit-scrollbar-thumb:active {
+  background: var(--color-secondary-text-hover);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--color-primary-text);
+  border-radius: 4px;
+}
+
+body::-webkit-scrollbar-track:hover,
+body::-webkit-scrollbar-track:active {
+  background: var(--color-primary-text-hover);
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
 }

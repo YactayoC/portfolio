@@ -13,6 +13,9 @@ const TechnologySchema = new Schema({
 
   category: {
     type: String,
+    enum: {
+      values: ['Client', 'Admin'],
+    },
   },
 });
 

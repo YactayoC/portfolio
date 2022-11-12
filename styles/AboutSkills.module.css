@@ -1,0 +1,130 @@
+/* About */
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 1rem;
+}
+
+.about-title {
+  font-size: 2rem;
+  color: var(--color-secondary-text);
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.about-title:after {
+  content: '';
+  display: block;
+  height: 0.5rem;
+  background-color: var(--color-text-underlined);
+  margin-top: -0.6rem;
+  width: 100%;
+}
+
+.about-text {
+  font-size: 1.2rem;
+  line-height: 2;
+  color: var(--color-primary-text);
+}
+
+/* Skills */
+.allSkills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.allSkills-title {
+  font-size: 2rem;
+  color: var(--color-secondary-text);
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.allSkills-title:after {
+  content: '';
+  display: block;
+  height: 0.5rem;
+  background-color: var(--color-text-underlined);
+  margin-top: -0.6rem;
+  width: 100%;
+}
+
+.allSkills-tabs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.allSkills-tabsList {
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.tabsList_tabHeadActive {
+  text-align: center;
+  color: var(--color-primary-text);
+  width: 100%;
+  font-weight: 700;
+}
+
+.tabsList_tabHeadActive::after {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  background-color: var(--color-primary-text);
+  height: 2px;
+  transition: all 0.3s ease-in-out;
+  animation: fadeInTab 0.3s ease-in-out;
+}
+
+@keyframes fadeInTab {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.tabsList_tabHead {
+  text-align: center;
+  color: var(--color-primary-text);
+  width: 100%;
+}
+
+.tabContent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  animation: fadeIn 0.5s ease-in-out;
+  justify-items: center;
+}
+
+@media (min-width: 468px) {
+  .tabContent {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.tabContentHide {
+  display: none;
+}

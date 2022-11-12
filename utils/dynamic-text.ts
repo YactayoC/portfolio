@@ -1,6 +1,6 @@
 export const changeText = () => {
   if (typeof document !== 'undefined') {
-    const text = document.querySelector('#dynamic');
+    const text = document.querySelector('#dynamic-text');
     const textLoad = () => {
       setTimeout(() => {
         text!.textContent = 'Frontend Developer';
