@@ -9,7 +9,7 @@ interface Props {
   projects: IProject[];
 }
 
-const Projects: FC<Props> = ({ projects }) => {
+const ProjectsSalient: FC<Props> = ({ projects }) => {
   return (
     <section id="projects" className={styles.projectsSalient}>
       <h2 className={styles["projectsSalient-title"]}>MY PROJECTS</h2>
@@ -29,4 +29,4 @@ const Projects: FC<Props> = ({ projects }) => {
   );
 };
 
-export default Projects;
+export default ProjectsSalient;

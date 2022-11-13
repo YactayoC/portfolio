@@ -1,5 +1,5 @@
 export const changeText = () => {
-  if (typeof document !== 'undefined') {
+  if (typeof window !== 'undefined') {
     const text = document.querySelector('#dynamic-text');
     const textLoad = () => {
       setTimeout(() => {
@@ -11,6 +11,6 @@ export const changeText = () => {
       }, 4000);
     };
     textLoad();
-    setInterval(textLoad, 8000);
+    return setInterval(textLoad, 8000);
   }
 };

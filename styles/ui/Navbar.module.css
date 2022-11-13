@@ -56,18 +56,28 @@
   color: var(--color-primary-text);
   font-size: 1.3rem;
   text-decoration: none;
+  position: relative;
 }
 
-.navbar-desktop-links a:hover {
-  content: "";
+.navbar-desktop-links a:hover::after {
+  content: '';
   display: block;
   position: absolute;
   height: 0.2rem;
   width: 100%;
   background-color: var(--color-primary-text);
   margin: 0 auto;
-  -webkit-animation: all .3s ease-in-out;
-  animation: all .3s ease-in-out;
+  animation: transitionUnderlined 0.3s ease-in-out;
+}
+
+@keyframes transitionUnderlined {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
 }
 
 /* Mobile */

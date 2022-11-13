@@ -8,6 +8,7 @@
   gap: 0.5rem;
   width: 5rem;
   height: 5rem;
+  width: 100%;
 }
 
 .skill__picture {
@@ -32,7 +33,7 @@
 .skill__caption {
   color: var(--color-primary-text);
   position: absolute;
-  bottom: -1rem;
+  bottom: -2.5rem;
   transition: all 0.3s ease-in-out;
   text-align: center;
 }

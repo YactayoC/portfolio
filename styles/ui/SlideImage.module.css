@@ -1,0 +1,28 @@
+.each-slide > div {
+  display: flex;
+  justify-content: center;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 25rem;
+}
+
+.image {
+  border-radius: 10px;
+  animation: fadeInSlide 0.3s ease-in-out;
+}
+
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.each-slide .react-slideshow-container + ul.indicators .each-slideshow-indicator::before {
+  background-color: red;
+  color: red;
+}

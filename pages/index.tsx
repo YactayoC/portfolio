@@ -3,7 +3,7 @@ import { FC } from 'react';
 
 import { getAllTechnologies } from 'database/dbTechonologies';
 import { getSalientProjects } from 'database/dbProjects';
-import { About, AllSkills, Contact, Hero, Navbar, PortfolioLayout, Projects } from 'components';
+import { About, AllSkills, Contact, Hero, Navbar, PortfolioLayout, ProjectsSalient } from 'components';
 import { IProject, ITechnology } from 'interfaces';
 
 interface Props {
@@ -19,11 +19,11 @@ const Home: FC<Props> = ({ technologies, projects }) => {
         <Hero />
       </header>
       <main className="container">
-        <div className='two-content'>
+        <div className="two-content">
           <About />
           <AllSkills technologies={technologies} />
         </div>
-        <Projects projects={projects} />
+        <ProjectsSalient projects={projects} />
         <Contact />
       </main>
     </PortfolioLayout>
@@ -39,6 +39,7 @@ export const getStaticProps: GetStaticProps = async ctx => {
       technologies,
       projects,
     },
+    revalidate: 86400,
   };
 };
 

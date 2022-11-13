@@ -1,10 +1,10 @@
 import validator from "validator";
 
-export const isValidFullname = (name: string): boolean => {
+export const isValidName = (name: string): boolean => {
   const resp = validator.isAlpha(name, "es-ES", { ignore: " " });
   return !!resp;
 };
 
-export const isFullname = (name: string): string | undefined => {
-  return isValidFullname(name) ? undefined : "Not a valid nameo";
+export const isName = (name: string): string | undefined => {
+  return isValidName(name) ? undefined : "Not a valid name";
 };
