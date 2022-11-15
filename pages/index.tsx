@@ -13,7 +13,7 @@ interface Props {
 
 const Home: FC<Props> = ({ technologies, projects }) => {
   return (
-    <PortfolioLayout title="Sebastian Yactayo">
+    <PortfolioLayout title="YactayoC">
       <header>
         <Navbar />
         <Hero />
