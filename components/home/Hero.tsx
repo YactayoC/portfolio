@@ -20,9 +20,9 @@ const Hero = () => {
           Frontend Developer
         </span>
       </h1>
-      <button className={styles['hero-cv']}>
+      <a className={styles['hero-cv']} href="CV.pdf" download>
         Download CV <i className="fa-solid fa-download"></i>
-      </button>
+      </a>
       <div className={styles['hero-buttons_social']}>
         <a href="https://github.com/YactayoC" target="_blank" rel="noreferrer">
           <img
