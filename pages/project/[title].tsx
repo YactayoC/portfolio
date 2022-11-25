@@ -6,20 +6,23 @@ import { PortfolioLayout, Skill, SlideImages } from 'components';
 import { getAllProjects, getProjectByTitle } from 'database/dbProjects';
 import { IProject } from 'interfaces';
 import styles from "styles/ProjectDetail.module.css";
+import { useRouter } from 'next/router';
 
 interface Props {
   project: IProject;
 }
 
 const ProjectTitle: FC<Props> = ({ project }) => {
+  const router = useRouter();
+
   return (
     <PortfolioLayout title={`${project.title} | YactayoC`}>
       <div className={styles.detail}>
-        <Link href="/">
+        <div onClick={() => router.back()}>
           <button className={styles.back}>
             <i className="fa-solid fa-arrow-left"></i>
           </button>
-        </Link>
+        </div>
         <div className={styles.detail__content}>
           <div className={styles.content__text}>
             <h1>{project.title}</h1>
