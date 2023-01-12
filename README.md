@@ -1,2 +1,8 @@
 # Bienvenido a mi portfolio
-<div class="tenor-gif-embed" data-postid="19548623" data-share-method="host" data-aspect-ratio="1.05263" data-width="100%"><a href="https://tenor.com/view/capoo-bugcat-blue-cat-welcome-gif-19548623">Capoo Bugcat Sticker</a>from <a href="https://tenor.com/search/capoo-stickers">Capoo Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div class="tenor-gif-embed" data-postid="19548623" data-share-method="host" data-aspect-ratio="1.05263" data-width="100%"><a href="https://tenor.com/view/capoo-bugcat-blue-cat-welcome-gif-19548623">Capoo Bugcat Sticker</a>from <a href="https://tenor.com/search/capoo-stickers">Capoo Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+</body>
+</html>
+
