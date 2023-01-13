@@ -27,7 +27,7 @@
 }
 
 .navbar-mobile a i:hover {
-  color: var(--color-primary-text-hover);
+  color: var(--color-secondary-text);
 }
 
 .navbar-desktop {

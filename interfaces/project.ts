@@ -10,4 +10,5 @@ export interface IProject {
   video: string;
   url: string;
   salient: boolean;
+  category: string;
 }

@@ -38,7 +38,11 @@ const ProjectSchema = new Schema({
 
   salient: {
     type: Boolean,
-  }
+  },
+
+  category: {
+    type: String,
+  },
 });
 
 const Project: Model<IProject> = mongoose.models.Project || model('Project', ProjectSchema);
