@@ -1,0 +1,128 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-block: 4rem;
+}
+
+@media (min-width: 768px) {
+  .contact {
+    margin-top: 8rem;
+  }
+}
+
+.contact h2 {
+  font-size: 2rem;
+  color: var(--color-secondary-text);
+  padding-bottom: 2rem;
+}
+
+.contact h2:after {
+  content: '';
+  display: block;
+  height: 0.5rem;
+  background-color: var(--color-text-underlined);
+  margin-top: -0.6rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 90%;
+  padding-top: 2rem;
+  position: relative;
+  transition: width 0.3s ease-in-out;
+}
+
+@media (min-width: 576px) {
+  .form {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  .form {
+    width: 50%;
+  }
+}
+
+.form__group {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+.form__group-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media (min-width: 576px) {
+  .form__group-inputs {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+.form__input {
+  width: 100%;
+  font-family: 'Roboto';
+  font-size: 1.1rem;
+  color: var(--color-background);
+  padding: 0.6rem 0.3rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding-inline: 0.5rem;
+}
+
+.form__label {
+  color: var(--color-primary-text);
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.form__textarea {
+  width: 100%;
+  font-family: 'Roboto';
+  outline: none;
+  resize: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  padding: 0.6rem 0.3rem;
+  position: relative;
+}
+
+.form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--color-primary-text);
+  border: 2px solid var(--color-secondary-text);
+  padding: 0.6rem 0.6rem 0.6rem 0.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 1.2rem;
+}
+
+.form button:hover {
+  background-color: var(--color-secondary-text);
+}
+
+.form__error {
+  position: absolute;
+  bottom: -1.5rem;
+  color: rgb(250, 98, 98);
+  margin: 0;
+  font-weight: 700;
+}
