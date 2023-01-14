@@ -5,6 +5,8 @@ import { IDBConnectionCache } from '@/interfaces';
 const MONGODB_URI = process.env.MONGO_URI;
 const errorMessage = 'Please define the MONGODB_URL environment variable';
 
+mongoose.set('strictQuery', true);
+
 declare global {
   var mongoose: IDBConnectionCache;
 }
