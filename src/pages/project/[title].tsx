@@ -15,12 +15,15 @@ interface Props {
 
 const ProjectTitle: FC<Props> = ({ project }) => {
   const router = useRouter();
-  const { isLangSpanish } = useLang();
+  const { isLangSpanish, locale } = useLang();
 
   return (
     <PortfolioLayout title={`${project.title} | YactayoC`}>
       <div className={styles.detail}>
-        <div onClick={() => router.back()}>
+        <div
+          // onClick={() => router.back()}
+          onClick={() => router.push(`/${locale}/projects`)}
+        >
           <button className={styles.back}>
             <i className="fa-solid fa-arrow-left"></i>
           </button>

@@ -6,14 +6,15 @@ import { isAtomLangSpanish } from '../store/LangSpanish';
 export const useLang = () => {
   const router = useRouter();
   const [isLangSpanish, setIsLangSpanish] = useAtom(isAtomLangSpanish);
+  const locale = router.locale;
 
   useEffect(() => {
-    if (router.locale !== 'es') return setIsLangSpanish(false);
-    setIsLangSpanish(true);
+    return setIsLangSpanish(router.locale === 'es');
   }, [router.locale, setIsLangSpanish]);
 
   return {
     isLangSpanish,
     setIsLangSpanish,
+    locale,
   };
 };

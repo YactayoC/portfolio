@@ -12,7 +12,7 @@ interface Props {
 }
 
 const ProjectsSalient: FC<Props> = ({ projects }) => {
-  const { isLangSpanish } = useLang();
+  const { isLangSpanish, locale } = useLang();
 
   return (
     <section id="projects" className={styles.projectsSalient}>
@@ -23,7 +23,7 @@ const ProjectsSalient: FC<Props> = ({ projects }) => {
         ))}
       </div>
       <div className={styles['projectsSalient-seeMore']}>
-        <Link href="/projects">
+        <Link href={`${locale}/projects`}>
           <button>
             {isLangSpanish ? es.projects.button : en.projects.button} <i className="fa-solid fa-arrow-right"></i>
           </button>

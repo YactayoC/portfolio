@@ -12,7 +12,7 @@ interface Props {
 }
 
 const Project: FC<Props> = ({ project }) => {
-  const { isLangSpanish } = useLang();
+  const { isLangSpanish, locale } = useLang();
 
   const playVideo = (e: any) => {
     e.target?.play();
@@ -35,7 +35,7 @@ const Project: FC<Props> = ({ project }) => {
       ></video>
       <div className={styles.project__details}>
         <p>{project.title}</p>
-        <Link href={`/project/${project.title}`}>
+        <Link href={`${locale}/project/${project.title}`}>
           <p>
             {isLangSpanish ? es.projects.details : en.projects.details} <i className="fa-solid fa-arrow-right"></i>
           </p>
